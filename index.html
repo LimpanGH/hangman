@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!--Bootstrap 4 CDN-->
+  <!-- Bootstrap 4 CDN (there are newer versions of Bootstrap and some of the utilites bellow are deprecated e.g float-rigth).
+  (A content delivery network (CDN) refers to a geographically distributed group of servers which work together to provide fast delivery of Internet content, ett CSS framework som man kan kalla på med olika keywords och utilities)-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   
   <title>Hangman</title>
 </head>
+
 <body>
-  <div class="container">
-    <h1 class="text-center">Hangman</h1>
-    <div class="float-right">Wrong Guesses: <span id="mistakes">0</span> of <span id="maxWrong"></span></div>
+  <div class="container"> <!--A container class defines a collection of css components that are visually organized in a certain way.-->
+    <h1 class="text-center">Hangman</h1> <!--Read about boostrap-classes at https://getbootstrap.com/docs/5.3/utilities/text/-->
+    <div class="float-right">Wrong Guesses: <span id="mistakes">0</span> of <span id="maxWrong"></span></div> <!-- In BS5 they renamed .float-left and .float-right to .float-start and .float-end.-->
     <div class="text-center">
-      <img id='hangmanPic' src="images/0.jpg" alt="">
+      <img id='hangmanPic' src="images/0.jpg" alt="gallow">
       <p>Guess the Programming Language:</p>
       <p id="wordSpotlight">The word to be guessed goes here</p>
       <div id="keyboard"></div>
-      <button class="btn btn-info" onclick="reset()">Reset</button>
+      <button class="btn btn-info" onclick="reset()">Reset</button> <!--btn-info is one of the 9 types of predefined buttons in BS, https://getbootstrap.com/docs/5.0/components/buttons/ -->
     </div>
   </div>
 

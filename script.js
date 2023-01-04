@@ -8,7 +8,7 @@ var programming_languages = [
 	"css",
 	"c",
 	"csharp",
-	"golang",
+	"golang", 
 	"kotlin",
 	"php",
 	"sql",
@@ -21,16 +21,20 @@ let mistakes = 0;
 let guessed = [];
 let wordStatus = null;
 
+// This function will pick one of the words in our array of programming-languages.
 function randomWord() {
     answer = programming_languages[Math.floor(Math.random() * programming_languages.length)];
     // alert(answer);
 }
 
+/*  * btn-lg is setting the size of the buttons
+    * m-2 is setting the margin between the buttons: https://getbootstrap.com/docs/4.0/utilities/spacing/ 
+    * the strings with + letter + could be cleaned up by converting then to template strings */
 function generateButtons() {
     let buttonsHTML = 'abcdefghijklmnopqrstuvwxzy'.split('').map(letter =>
         `
         <button
-            class="btn btn-lg btn-primary m-2" 
+            class="btn btn-lg btn-primary m-2"
             id='` + letter + `'
             onClick="handleGuess('` + letter + `')"
         >

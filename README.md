@@ -1,5 +1,7 @@
 # hangman
 
+PURE VANILLA JS WITH BS 4.
+
 // https://www.youtube.com/watch?v=dgvyE1sJS3Y
 
 // Initiate an HTML boiler plate
